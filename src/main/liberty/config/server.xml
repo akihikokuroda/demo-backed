@@ -1,4 +1,4 @@
-<server description="demo server">
+<server description="demo-backend server">
 
   <featureManager>
     <feature>microprofile-1.2</feature>
