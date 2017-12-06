@@ -1,5 +1,6 @@
 package application.rest.v1;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import javax.inject.Provider;
 import javax.ws.rs.GET;
@@ -9,8 +10,11 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 import org.eclipse.microprofile.config.inject.ConfigProperty;
+import org.eclipse.microprofile.metrics.annotation.Metered;
 
 @Path("v1/example")
+@ApplicationScoped
+@Metered(name="Example", tags="app=demo-backend")
 public class Example {
 
     @Inject
